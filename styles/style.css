@@ -4,3 +4,127 @@
     --pallet-color1: #49a09d;
     --pallet-color2: #5f2c82;
 }
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+html, body {
+    background-image: linear-gradient(0deg, var(--pallet-color1), var(--pallet-color2));
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 350px;
+    height: fit-content;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: width .25s, height .25s;
+}
+
+section#login > div#image {
+    display: block;
+    background: var(--pallet-color2) url(../images/pattern.jpg) center center / cover no-repeat;
+    height: 150px;
+}
+
+section#login > div#form {
+    display: block;
+    padding: 10px;
+}
+
+div#form > h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+div#form > p {
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 15px;
+}
+
+div.field {
+    background-color: var(--pallet-color2);
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+div.field input {
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 1px solid var(--pallet-color2);
+    border-radius: 10px;
+    padding: 5px;
+    transform: translateY(-8px);
+}
+
+div.field input:focus-within {
+    border: none;
+}
+
+div.field span.material-symbols-outlined {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.field label {
+    display: none;
+}
+
+form input[type='submit'] {
+    display: block;
+    color: white;
+    background-color: var(--pallet-color1);
+    width: 100%;
+    height: 40px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form input[type='submit']:hover {
+    background-color: hsl(178, 37%, 35%);
+}
+
+form a.button {
+    display: block;
+    color: hsl(178, 37%, 35%);
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--pallet-color1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+form a.button:hover {
+    color: white;
+    background-color: hsl(178, 37%, 35%);
+}
